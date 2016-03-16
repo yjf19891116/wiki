@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <script src="layer/layer.js"></script>
+    <link href="../test/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<button>sadf</button>
+<script>
+    $('button').on('click', function(){
+        layer.open({
+            type: 1,
+            area: ['600px', '600px'],
+            shadeClose: true, //点击遮罩关闭
+            content: '\<\div style="padding:20px;">自定义内容\<a>asdfasdfafsdfasdf</a><\/div>'
+        });
+    });
+</script>
+</body>
+</html>
