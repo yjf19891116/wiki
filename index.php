@@ -61,10 +61,17 @@
         <td><a href="javascript:;" onclick="">修改</a>|<a href="javascript:;" onclick="deleteRow(this)">删除</a></td>
     </tr>
     <?php
+<<<<<<< HEAD
     $conn=mysqli_connect("localhost","root","jxyangjf","test");
     mysqli_set_charset($conn, 'utf8');
     mysqli_select_db($conn,"test");
     $result = mysqli_query($conn,"SELECT * FROM `gdtest`");
+=======
+    $conn=mysqli_connect("localhost","root","root","test");
+    mysqli_set_charset($conn, 'utf8');
+    mysqli_select_db($conn,"test");
+    $result = mysqli_query($conn,"SELECT * FROM `dbtest`");
+>>>>>>> origin/master
     while($result_arr=mysqli_fetch_array($result)) {
         //print_r($result_arr);
         $id = $result_arr["id"];
@@ -199,7 +206,12 @@
             type: 1,
             area: ['600px', '600px'],
             shadeClose: true, //点击遮罩关闭
+<<<<<<< HEAD
             content: '\<\div style="padding:20px;">自定义内容\<a>asdfasdfafsdfasdf</a><\/div>'
+=======
+            content: '<h4 class="text-left" style="margin-left: 20px"><strong>问题描述：</strong></h4><input type="text" class="form-control" style="height: 100px;width: 560px;margin-left: 20px;margin-right: 20px">' +
+            '<h4 class="text-left" style="margin-left: 20px"><strong>解决办法：</strong></h4><input type="text" class="form-control" style="height: 100px;width: 560px;margin-left: 20px;margin-right: 20px">'
+>>>>>>> origin/master
         });
     };
 </script>
